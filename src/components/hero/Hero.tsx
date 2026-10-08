@@ -1,25 +1,14 @@
 import { profile } from "@/content/profile";
-import { LiveClock } from "./LiveClock";
 
 /** Stagger helper: passes the delay to the `.reveal` animation via a CSS variable. */
 const delay = (ms: number) => ({ "--reveal-delay": ms }) as React.CSSProperties;
 
 export function Hero() {
   return (
-    <main
-      id="main"
-      className="hero-grid relative flex min-h-dvh flex-col justify-between overflow-hidden px-6 py-6 font-mono text-sm md:px-12 md:py-8"
+    <div
+      id="top"
+      className="hero-grid relative flex min-h-dvh flex-col justify-between overflow-hidden px-6 pb-6 pt-24 font-mono text-sm md:px-12 md:pb-8"
     >
-      <header className="reveal flex items-start justify-between text-muted" style={delay(0)}>
-        <span className="tracking-[0.18em] text-foreground">MH</span>
-        <span className="flex items-center gap-3">
-          <span className="hidden sm:inline">{profile.location}</span>
-          <span className="text-accent">
-            <LiveClock timeZone={profile.timeZone} />
-          </span>
-        </span>
-      </header>
-
       <section className="max-w-[90rem]">
         <p className="reveal mb-6 text-xs tracking-[0.2em] text-muted" style={delay(150)}>
           SHEET 01 · IDENTITY
@@ -50,6 +39,6 @@ export function Hero() {
           {profile.status}
         </span>
       </footer>
-    </main>
+    </div>
   );
 }

@@ -11,6 +11,13 @@ export const profile = {
   role: "Builder & founder",
   tagline: "Building products, ventures and projects from Hamburg.",
   status: "Open for interesting work",
+  launchYear: 2026,
+  // Placeholders — set the real address and profile URLs before launch.
+  email: "hello@example.com",
+  socials: [
+    { label: "GitHub", href: "https://github.com/" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/" },
+  ],
 } as const;
 
 export type Profile = typeof profile;

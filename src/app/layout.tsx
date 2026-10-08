@@ -32,7 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <script dangerouslySetInnerHTML={{ __html: INTRO_GATE_SCRIPT }} />
         {/* Without JS there is no intro: show the page, hide the overlay. */}
         <noscript>
-          <style>{`.intro-root{display:none}.reveal{opacity:1!important;transform:none!important}`}</style>
+          <style>{`.intro-root{display:none}.reveal,.scroll-reveal{opacity:1!important;transform:none!important}`}</style>
         </noscript>
       </head>
       <body className="min-h-full flex flex-col">
